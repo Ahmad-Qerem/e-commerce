@@ -1,0 +1,18 @@
+.ShowMoreBTN{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    cursor:pointer;
+    width: 130px;
+    height: 40px;
+    background-color: #33333A;
+    text-align: center;
+    margin-bottom: 60px;
+    
+}
+.ShowMoreBTN:hover{
+    background-color: #55533a;
+}

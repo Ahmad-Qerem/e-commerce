@@ -1,0 +1,14 @@
+.NaveBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+@media screen  and (max-width:700px){
+    .NaveBar{
+
+        justify-content: start;
+
+    }
+}
+

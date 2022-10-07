@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../LiftSide/Poppins-Medium.ttf);
+}
+.RightSide{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    color: #33333A;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 40px;
+    text-transform: uppercase;
+    height: 100%;
+    width: 20%;
+    
+}
+.MyImg {
+    height: 20px;
+    width: 20px;
+}
+
+.LogIn{
+    text-transform: uppercase;
+    cursor:pointer;
+}
+.LogIn:hover{
+    color: tomato;
+}
+
+@media screen and (max-width:800px) {
+    .RightSide{
+        visibility: hidden;
+        display: none;
+    }
+    
+}

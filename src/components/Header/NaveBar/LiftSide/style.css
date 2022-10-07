@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+}
+
+
+.myLi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    cursor:pointer;
+}
+.MyA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #33333A;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.myLi:hover{
+    
+    color: tomato;
+}
+
+  
+.down {
+    font-size: 10px;
+    width: 6px;
+    height: 3px;
+    transform: rotate(90deg);
+    margin-left:9px ;
+
+  }
+.Logo{
+    margin-left: var(--space-2xl-3xl);
+    opacity: 1;
+    color: rgba(82,82,82,1);
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 60px;
+}
+.MyUl{
+    
+    justify-content: space-between;
+    display: flex;
+
+    margin-left:40px ;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+
+}
+
+.LeftDiv{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.BMenu{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    
+}
+
+@media screen and (max-width:700px) {
+    .MyUl{
+        visibility: hidden;
+        display: none;
+    }
+
+    .BMenu{
+        visibility: visible;
+        display: block;
+    
+    }
+    
+}
