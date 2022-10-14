@@ -1,9 +1,9 @@
-import "./style.css"
+import styles from "./styles.module.css"
 
 const BTN = ()=>{
     return(
         <>
-            <div className="MyBTN2">Shop Now</div>
+            <div className={styles.MyBTN2}>Shop Now</div>
         </>
     );
 };

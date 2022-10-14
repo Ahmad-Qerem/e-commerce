@@ -1,0 +1,60 @@
+
+.VidWrapper{
+    display: flex;
+    justify-content: space-between;    
+    flex-wrap: wrap;
+    
+    padding: 30px 150px 30px 150px;
+}
+
+.VidImg{
+    height:240px ;
+    width:361px ;
+}
+
+.SubTitle{
+    opacity: 1;
+    color: rgba(51,51,58,1);
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 25px;
+    padding: 25px 20px 20px 20px ;
+}
+
+.VidItem{
+
+}
+.MyVideo{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Pause{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border: 7px solid white;
+    border-radius: 50%;
+}
+.arrowRight {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+  }
+
+
+@media screen and (max-width:1070px) {
+    .VidWrapper{
+        justify-content: center;    
+        padding: 0;
+    }
+    
+  }
+

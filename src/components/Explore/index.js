@@ -1,4 +1,4 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 import ExploreContainer from "./ExploreContainer";
 /*
 import ExploreContainer from 
@@ -7,8 +7,8 @@ import BTN from "./BTN";
 
 const Explore = ()=>{
     return(
-        <div className="ExploreTopModule">
-            <h1 className="ExploreTitle">Explore</h1>
+        <div className={styles.ExploreTopModule} >
+            <h1 className={styles.ExploreTitle}>Explore</h1>
             <ExploreContainer/>
             <BTN/>
         </div>

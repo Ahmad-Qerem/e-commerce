@@ -10,7 +10,7 @@
     justify-content: end;
     align-content: center;
     height: 600px;
-    background-image: url("./images/SlideImage1.png");
+    background-image: url("./SlideImage1.png");
 }
 .MyButton{
     color: white;

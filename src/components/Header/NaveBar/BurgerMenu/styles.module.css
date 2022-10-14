@@ -41,7 +41,14 @@
 .margin{
     margin-top: 10px;
 }
+.down {
+    font-size: 10px;
+    width: 6px;
+    height: 3px;
+    transform: rotate(90deg);
+    margin-left:9px ;
 
+  }
 @media screen and (max-width:700px) {
     .MyBurgerMenu{
         display: block;

@@ -1,8 +1,8 @@
-import "./styles.css"
+import styles from"./styles.module.css"
 import BTN from "./BTN/index"
 const CardHover = ()=>{
     return(
-        <div className="Hovering2 ">
+        <div className={styles.Hovering2}>
             <BTN/>
         </div>
     );

@@ -1,10 +1,10 @@
-import "./styles.css"
+import styles from"./styles.module.css"
 
 const SeenIn=()=>{
     return(
-        <div className="SeenWrapper">
-            <div className="SeenTitle">As Seen On</div>
-            <img className="ButImage" src="images/07cd3f1fa1b05fc98036589db10782d230e394f7.png"/>
+        <div className={styles.SeenWrapper}>
+            <div className={styles.SeenTitle}>As Seen On</div>
+            <img className={styles.ButImage} src="images/image_72.png"/>
         </div>
     );
 };

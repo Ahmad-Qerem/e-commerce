@@ -1,7 +1,7 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 const NBTN=()=>{
     return(
-        <div className="ShowMoreBTN">
+        <div className={styles.ShowMoreBTN}>
             show more
         </div>
     );

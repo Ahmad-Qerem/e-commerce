@@ -1,4 +1,4 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 import CatsContainer from "./CatsContainer";
 import PartnersContainer from "./PartnersContainer";
 import ContactUsContainer from "./ContactUsContainer";
@@ -8,9 +8,9 @@ import CopyRight from "./CopyRight";
 const Footer =()=>{
     return(
         <>
-        <div className="Footer">
-            <div className="FooterWrapper">
-                <div className="InnerFooterWrapper"> 
+        <div className={styles.Footer}>
+            <div className={styles.FooterWrapper}>
+                <div className={styles.InnerFooterWrapper}> 
                     <CatsContainer/>
                     <PartnersContainer/>
                     <ContactUsContainer/>

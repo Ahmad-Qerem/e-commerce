@@ -1,8 +1,8 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 
 const NewTitle=()=>{
     return(
-        <div className="NewTitle">
+        <div className={styles.NewTitle}>
             new
         </div>
     );

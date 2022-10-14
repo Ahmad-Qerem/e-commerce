@@ -1,13 +1,13 @@
-import "./style.css"
+import styles from "./styles.module.css"
 
 const Slider = (    )=>{
     return(
-        <div className="SlidesContainer">
-            <div className="LeftArrow arrowHover"><div className="arrow left"></div></div>
-            <div className="RightArrow arrowHover"><div className="arrow right"></div></div>
-            <div className="content">
-                <span className="MySpan">Perfume Tips <br></br>Tricks</span>
-                <button className="MyButton">shop now</button>
+        <div className={styles.SlidesContainer}>
+            <div className={`${styles.LeftArrow} ${styles.arrowHover}`}><div className={`${styles.arrow} ${styles.left}`}></div></div>
+            <div className={`${styles.RightArrow} ${styles.arrowHover}`}><div className={`${styles.arrow} ${styles.right}`}></div></div>
+            <div className={styles.content}>
+                <span className={styles.MySpan}>Perfume Tips <br></br>Tricks</span>
+                <button className={styles.MyButton}>shop now</button>
             </div>
         </div>
     );

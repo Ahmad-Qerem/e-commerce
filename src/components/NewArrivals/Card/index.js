@@ -1,15 +1,15 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 import NewTitle from "./NewTitle";
 import CardHover from "./CardHover";
-const Card = ()=>{
+const Card = ( {ImagePath,New,Description,Price})=>{
     return (
-        <div className="MyCard">
+        <div className={styles.MyCard}>
             <CardHover/>
-            <NewTitle/>
-            <img className="MyImage2" src="./images/a18e6a7585aba0a670d755708b53fb0d50be1417.png" alt="new clothes"/>
-            <div className="Description">
-                <p className="MyP">Pueraria Mirifica And Study Phyto Estrogens</p>
-                <span className=".MySpan2">$599.00</span>        
+            {New?<NewTitle/>:<></>}
+            <img className={styles.MyImage2} src={`./images/${ImagePath}`} alt="new clothes"/>
+            <div className={styles.Description}>
+                <p className={styles.MyP}>{Description}</p>
+                <span className={styles.MySpan2}>{Price}</span>        
             </div>
         </div>
     );

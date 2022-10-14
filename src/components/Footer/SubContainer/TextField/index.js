@@ -1,9 +1,9 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 
 const TextField = ()=>{
     return(
         <div >
-            <input className="TextField" type="text" placeHolder="Enter your email"></input>
+            <input className={styles.TextField} type="text" placeholder="Enter your email"></input>
         </div>
     );
 };

@@ -1,10 +1,8 @@
-import "./style.css"
+import styles from "./styles.module.css"
 
 const BTN = ()=>{
     return(
-        <>
-            <div className="MyBTN">See the journal</div>
-        </>
+        <div className={styles.MyBTN}>See the journal</div>
     );
 };
 

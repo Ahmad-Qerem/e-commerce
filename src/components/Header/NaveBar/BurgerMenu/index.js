@@ -1,17 +1,17 @@
-import "./style.css"
+import styles from "./styles.module.css"
 
 
 const ListItemsText = ["shop","fabric","journal","about"];
 
 const BurgerMenu = (  )=> {
     return(
-        <div className="MyBurgerMenu">
-            <img className="IconBM" src="./images/Icons/icon-hamburger.svg"/>
-            <div className="Menu">
+        <div className={styles.MyBurgerMenu}>
+            <img className={styles.IconBM} src="./images/icon-hamburger.svg"/>
+            <div className={styles.Menu}>
                 {
                     ListItemsText.map((item)=>{
                         return(
-                            <div className="MenuItem"> {item} <div className="down margin">&#62;</div></div>   
+                            <div className={styles.MenuItem}> {item} <div className={`${styles.down} ${styles.margin}`}>&#62;</div></div>   
                         );
                     })
                 }

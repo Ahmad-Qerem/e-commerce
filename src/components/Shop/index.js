@@ -1,9 +1,9 @@
-import "./styles.css"
+import styles from "./styles.module.css"
 import ShopCards from "./ShopCards";
 const Shop=()=>{
     return(
-        <div className="ShopWrapper">
-            <div className="SopTile">Shop</div>
+        <div className={styles.ShopWrapper}>
+            <div className={styles.ShopTile}>Shop</div>
             <ShopCards/>
         </div>
     );
