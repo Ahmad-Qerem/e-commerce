@@ -13,7 +13,7 @@ const ExploreContainer = ()=>{
                 <img className={styles.ImageNum1} src="./images/image_24.png" alt="person sitting on a chare"/>
             </div>
 
-            <div className="Div1 borderTop">
+            <div className={`${styles.Div1} ${styles.borderTop}`}>
                 <div className="">
                     <div className={styles.DateStyle}>FIELDTESTED.JANUARY 19, 2017</div>
                     <h1 className={styles.MyH1Style}>Kérastase: A Collaboration</h1>
@@ -26,7 +26,7 @@ const ExploreContainer = ()=>{
                 </div>
             </div>
 
-            <div className="Div2 borderTop">
+            <div className={`${styles.Div2} ${styles.borderTop}`}>
                 <div className={styles.InnerDiv}>
                     <div className={styles.DateStyle}>FIELDTESTED.JANUARY 19, 2017</div>
                     <h1 className={styles.MyH1Style}>Jaclynn Seah</h1>
