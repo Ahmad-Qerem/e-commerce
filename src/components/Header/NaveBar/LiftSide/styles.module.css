@@ -80,7 +80,7 @@
     
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .MyUl{
         visibility: hidden;
         display: none;
