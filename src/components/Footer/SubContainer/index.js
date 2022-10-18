@@ -7,14 +7,15 @@ const SubContainer=()=>{
             <div className={styles.SubTitle}>
                 Subscribe to newsletter
             </div>
-            <div className={styles.myForm}>
+            
+            <div className={styles.TwoInputs}>
                 <TextField/>
-                <SubmitBTN/>
+                <SubmitBTN/>    
             </div>
-            <div >
+            
+            <div>
                 <img className={styles.MyIcons} src="./images/Facebook.svg"/>
                 <img className={styles.MyIcons} src="./images/Twitter.svg"/>
-
             </div>
         </div>
     );

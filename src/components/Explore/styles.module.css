@@ -10,11 +10,16 @@
 }
 
 .ExploreTopModule{
-
+    padding: 60px 150px 50px 150px;
     display: flex;
-   
     background-color: #FCFCFC;
     flex-direction: column;
     align-items: center;
+}
+@media screen and (max-width:1160px) {
+    .ExploreTopModule{
+        padding: 0;
+    }
+    
 }
 
