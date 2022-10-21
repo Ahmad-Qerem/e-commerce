@@ -1,7 +1,16 @@
 import styles from "./styles.module.css";
 import Card from "./Card";
-
+import QuickView from "./QuickView";
+import {useState}from"react"
+import Data from "../Data";
 const NewArrival=()=>{
+    const [QuickViewFlag,setQVFlag]=useState(false);
+    const [Index,SetIndex]= useState(0); 
+    const HandelButtonClick=(e,index)=>{
+        SetIndex(index);
+        setQVFlag(!QuickViewFlag);
+    }
+
     const AllData= [
         {
             ImagePath:"image_75.png",
@@ -42,7 +51,7 @@ const NewArrival=()=>{
         {
             ImagePath:"image_31.png",
             New:true,
-            Description:"Pueraria Mirifica And Study Phyto Estrogens",
+            Description:"Pueraria Mirificsa And Study Phyto Estrogens",
             Price:"$4.99"
         },
         {
@@ -52,16 +61,24 @@ const NewArrival=()=>{
             Price:"$34.99"
         }
     ];
+    
     return(
-        <div className={styles.MainContainer}>
-            <h1 className={styles.MyH1}>Featured</h1>
-            <div className={styles.MyContainer}>
-                {AllData.map((item)=>{
-                    return <Card {...item}/>
-                })}
-                
-            </div>
-        </div>
+        <>
+            {QuickViewFlag &&<QuickView {...Data.products[Index]} onClickClose={HandelButtonClick} />}
+
+
+              <div className={styles.MainContainer}>
+                <h1 className={styles.MyH1}>Featured</h1>
+                <div className={styles.MyContainer}>
+                    {AllData.map((item,index)=>{
+                        return (
+                            <Card onClick={HandelButtonClick} {...item} index1={index}/>
+                        )
+                    })}
+                    
+                </div>
+            </div>  
+        </>
     );  
 };
 export default NewArrival;

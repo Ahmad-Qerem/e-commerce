@@ -1,0 +1,12 @@
+img{
+    margin: 25px 30px 20px 25px ;
+    cursor: pointer;
+}
+img:hover{
+    outline: 3px solid #FF6008;
+}
+@media screen and (max-width:640px) {
+    img{
+        margin:0;
+    }
+}

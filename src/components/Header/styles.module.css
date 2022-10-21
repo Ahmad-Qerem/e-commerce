@@ -4,6 +4,15 @@
 }
 
 
+@media screen and (max-width:800px) {
+    .Header{
+        width: 100%;
+        position: fixed;
+        z-index: 5;
+        background-color: white;
+    }
+}
+
 
 
 

@@ -6,9 +6,8 @@
     justify-content: center;
     align-items: center;
     background-color: #33333A;
-    width: 174px;
+    padding: 2px 20px;
     height: 40px;
-    margin-top: 40px;
 }
 
 .MyBTN:hover{

@@ -47,3 +47,12 @@
         "right3 right4"; 
     }
 }
+@media screen and (max-width:580px) {
+    .MainExploreWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+}

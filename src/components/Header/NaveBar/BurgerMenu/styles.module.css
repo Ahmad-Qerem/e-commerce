@@ -6,10 +6,10 @@
     display: none;
     z-index: 6;
     position: absolute;
-    top: 8%;
+    top: 50%;
     right: 10%;
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
 }
 .Menu{
