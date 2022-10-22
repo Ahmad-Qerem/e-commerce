@@ -5,17 +5,16 @@ import * as all from "./components/AllComponents"
 const App = ( ) => {
   return (
     <div className='MainWrapper'>
-
-       <all.Header/>
+      <img src={require('./images/image_10.png')}/>
+      <all.Header/>
       <all.Slider/>  
       <all.NewArrival/>
-       <all.About/>
+      <all.About/>
       <all.Explore/>
       <all.Shop/>
       <all.RecommendedVideos/>
       <all.SeenIn/>
-      <all.Footer/>  
-       
+      <all.Footer/>
     </div>
   );
 };
