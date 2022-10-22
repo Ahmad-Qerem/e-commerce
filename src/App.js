@@ -5,7 +5,6 @@ import * as all from "./components/AllComponents"
 const App = ( ) => {
   return (
     <div className='MainWrapper'>
-      <img src={require('./images/image_10.png')}/>
       <all.Header/>
       <all.Slider/>  
       <all.NewArrival/>
