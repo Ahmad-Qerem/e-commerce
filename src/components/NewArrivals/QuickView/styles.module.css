@@ -15,7 +15,7 @@
 .WhiteWindow{
 
     background-color: white;
-    width: 90vw;
+    
     
     border: 1px solid white ;
 
@@ -75,7 +75,7 @@
 .Right{
     display: flex;
     flex-direction: column;
-    padding-right: 30px;
+    padding: 0 30px 0 30px;
     flex: 1;
 
 }
@@ -85,7 +85,6 @@
 }
 .HeaderTitle{
     color: rgba(3,3,3,1);
-    font-family: "VLNewParisHeadline";
     font-size: 24px;
     font-weight: 400;
     font-style: normal;
@@ -117,7 +116,6 @@
     padding: 10px;
     border-top: 1px solid rgba(102,102,102,0.1);;
     color: rgba(102,102,102,1);
-    font-family: "ProximaNova-Light";
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -129,7 +127,6 @@
 .Description div{
     
     color: rgba(0,0,0,1);
-    font-family: "ProximaNova-Light";
     font-size: 18px;
     font-weight: 300;
     font-style: normal;
@@ -139,7 +136,6 @@
 }
 .Description span{
     color: rgba(51,51,58,1);
-    font-family: "ProximaNova-Semibold";
     font-size: 12px;
     font-weight: 600;
     font-style: normal;
@@ -152,7 +148,7 @@
 .Description2{
     border-bottom: 1px solid rgba(102,102,102,0.1);;
 
-    padding: 10px;
+
     display: flex;
     flex-direction: column;
 }
@@ -163,7 +159,6 @@
 }
 .DescriptionTitle{
 
-    font-family: "ProximaNova-Light";
     font-size: 18px;
     font-weight: 300;
     font-style: normal;
@@ -174,7 +169,6 @@
 }
 .DescriptionItem span {
     color: rgba(102,102,102,1);
-    font-family: "ProximaNova-Light";
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
@@ -188,9 +182,49 @@
     padding: 10px;
 
 }
+.SizeH{
+    display: flex;
+    justify-content: space-between;
+}
+.Sizes{
+    display: flex;
+
+}
+.LabelContainer{
+    color: rgba(81,83,86,1);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    
+    padding: 10px;
+    border: 1px solid #F3F3F3 ;
+    height: 40px;
+    width: 50px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Sizes input{
+}
+.Sizes input:checked{
+    background-color: #DEDEDE;
+}
+
 .Size span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: rgba(51,51,58,1);
-    font-family: "ProximaNova-Regular";
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -201,13 +235,31 @@
 }
 .Size div span {
     color: rgba(102,102,102,1);
-    font-family: "ProximaNova-Regular";
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0px;
     text-align: left;
     line-height: 25px;
+}
+
+
+
+.radio{
+   display: none ;
+}
+.label{
+    padding: 10px 20px ;
+    border: 1px solid #DEDEDE;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#rad1:checked ~ .label1 ,
+#rad2:checked ~ .label2 ,
+#rad3:checked ~ .label3 ,
+#rad4:checked ~ .label4 {
+    background-color: #DEDEDE;
 }
 .AddToCart{
     padding: 10px;
@@ -219,7 +271,6 @@
 }
 .AddToCart span{
     color: rgba(51,51,58,1);
-    font-family: "ProximaNova-Regular";
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
@@ -247,7 +298,6 @@
 .QuantityCounterText{
 
     color: rgba(81,83,86,1);
-    font-family: "ProximaNova-Regular";
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
@@ -275,7 +325,6 @@
 .QuantityWishList span {
     border-bottom: 1px solid #33333A;
     color: rgba(51,51,58,1);
-    font-family: "ProximaNova-Semibold";
     font-size: 12px;
     font-weight: 600;
     font-style: normal;

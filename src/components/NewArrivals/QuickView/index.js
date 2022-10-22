@@ -77,8 +77,26 @@ const QuickView = ( {id,category,brand,stock,title,description,price,discountPer
                             </div>
                             <div className={styles.Size}>
                                 <span>SIZE</span>
-                                <div>
-                                    <div></div>
+                                <div className={styles.SizeH}>
+                                    <div className={styles.Sizes} >
+                                             
+                                            <input type="radio" id ="rad1"  name="lang" value="1" className={styles.radio}/>
+                                            <label className={`${styles.label} ${styles.label1} `} htmlFor= "rad1">1</label>
+                                            
+                                            
+                                            <input type="radio" id ="rad2"  name="lang" value="2" className={styles.radio}/>
+                                            <label className={`${styles.label} ${styles.label2} `} htmlFor= "rad2">2</label>
+
+                                            
+                                            <input type="radio" id ="rad3"  name="lang" value="3" className={styles.radio}/>
+                                            <label className={`${styles.label} ${styles.label3} `} htmlFor= "rad3">3</label>
+                                            
+                                            
+                                            <input type="radio" id ="rad4"  name="lang" value="4" className={styles.radio}/>
+                                            <label className={`${styles.label} ${styles.label4} `} htmlFor= "rad4">4</label>
+                                        
+                                    </div>
+                                    <span>Size Guidelines</span>
                                 </div>
                                 <div><span>Model is a US Size 2-4, wears Matter Size 1. 175 cm tall.</span></div>
                             </div>
