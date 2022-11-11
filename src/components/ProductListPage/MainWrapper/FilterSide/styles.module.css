@@ -1,0 +1,7 @@
+.MainWrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 260px;
+    padding-right: 30px;
+}
