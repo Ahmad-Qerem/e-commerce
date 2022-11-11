@@ -1,0 +1,25 @@
+.MainWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Class1{
+    color: rgba(51,51,58,1);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.Class2{
+    color: rgba(255,96,8,1);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 40px;
+    text-transform: uppercase;
+}

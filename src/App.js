@@ -6,13 +6,8 @@ const App = ( ) => {
   return (
     <div className='MainWrapper'>
       <all.Header/>
-      <all.Slider/>  
-      <all.NewArrival/>
-      <all.About/>
-      <all.Explore/>
-      <all.Shop/>
-      <all.RecommendedVideos/>
-      <all.SeenIn/>
+      {/* <all.HomePage/> */}
+      <all.ProductListPage/>
       <all.Footer/> 
     </div>
   );

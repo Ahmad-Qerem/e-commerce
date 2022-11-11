@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "./styles.module.css";
 import BTN from "../../../../Card/CardHover/BTN";
+import QuantityCounter from "./QuantityCounter";
 const AddToCart = () => {
   return (
     <div className={styles.AddToCart}>
+
       <span>Quantity</span>
       <div className={styles.AddToCartWrapper}>
-        <div className={styles.QuantityCounter}>
-          <div className={styles.QuantityCounterMark}>-</div>
-          <div className={styles.QuantityCounterText}>{"1"}</div>
-          <div className={styles.QuantityCounterMark}>+</div>
-        </div>
+        <QuantityCounter/>
+        
         <div>
           <BTN Text={"ADD TO CART"} />
         </div>

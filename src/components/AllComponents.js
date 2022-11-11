@@ -7,7 +7,11 @@ import Footer from "./Footer";
 import SeenIn from "./SeenIn";
 import RecommendedVideos from "./RecommendedVideos";
 import Shop from "./Shop";
+import HomePage from "./HomePage";
+import ProductListPage from "./ProductListPage";
 export {
+    ProductListPage,
+    HomePage,
     Header,
     NewArrival,
     Slider,

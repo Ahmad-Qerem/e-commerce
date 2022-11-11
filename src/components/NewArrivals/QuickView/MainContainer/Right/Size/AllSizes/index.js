@@ -1,13 +1,19 @@
 import styles from './styles.module.css'
-import React from 'react'
+import React from 'react';
 
 const AllSizes=()=> {
     const AllSizes=[1,2,3,4];
+
+    const HandelBoxClick=()=>{
+
+    }
+
+
   return (
-    <div>
+    <div className={styles.MainBoxSize}>
         {AllSizes.map((item,index)=>{
             return(
-                <>{index}</>
+                <div className={styles.BoxSize}>{item}</div>
             );
         })}
     </div>

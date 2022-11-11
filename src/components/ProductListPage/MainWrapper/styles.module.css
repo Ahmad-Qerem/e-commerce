@@ -1,0 +1,10 @@
+.MainWrapper{
+    padding: 40px 150px 0 150px;
+    display: flex;
+}
+
+.DataSide{
+    flex:3;
+    display: flex;
+    flex-wrap: wrap;
+}
