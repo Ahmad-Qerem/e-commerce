@@ -71,7 +71,7 @@ const ExploreContainer = ()=>{
             </ExploreItem>
 
             <ExploreItem  style={styles.Box1} Name={"Box1"}> 
-                <img  width={"555px"} height={"280px"} src={allData[0].ImagePath} alt={allData[0].ALT}/>
+                <img  className={styles.TopImage} src={allData[0].ImagePath} alt={allData[0].ALT}/>
             </ExploreItem>
 
             <ExploreItem style={styles.Box2} Name={"Box2"}> 

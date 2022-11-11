@@ -13,7 +13,7 @@ const App = ( ) => {
       <all.Shop/>
       <all.RecommendedVideos/>
       <all.SeenIn/>
-      <all.Footer/>
+      <all.Footer/> 
     </div>
   );
 };

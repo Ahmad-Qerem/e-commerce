@@ -1,0 +1,45 @@
+.arrow {
+    border: 1PX solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    margin: 1px;
+
+}
+.right {
+    transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+}
+
+.Close{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+
+
+}
+.Close:hover{
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.Title{
+    color: rgba(3,3,3,1);
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 40px;
+}
+
+.Nave{
+    display: flex;
+    padding: 20px 25px ;
+    justify-content: space-between;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+    background-color: rgba(255,255,255, 1);
+}

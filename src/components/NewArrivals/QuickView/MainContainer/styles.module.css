@@ -1,0 +1,17 @@
+.MainContainer{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+    background-color: rgba(255,255,255, 1);
+}
+.TopDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Button{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

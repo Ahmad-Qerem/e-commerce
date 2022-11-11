@@ -34,6 +34,10 @@
     max-width: 263px;
     grid-area: right4;
 }
+.TopImage{
+    width: 100%;
+    height: 280px;
+}
 @media screen and (max-width:1160px) {
     .MainExploreWrapper{
        grid-template-areas: 

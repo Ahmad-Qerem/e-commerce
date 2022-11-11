@@ -9,7 +9,8 @@
 
 .VidImg{
     height:240px ;
-    width:361px ;
+    width: 100%;
+    max-width:361px ;
 }
 
 .SubTitle{
