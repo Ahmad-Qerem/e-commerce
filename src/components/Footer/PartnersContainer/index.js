@@ -1,4 +1,4 @@
-import styles from "./styles.module.css"
+import styles from"./../stylesShared.module.css"
 
 const PartnersContainer=()=>{
     const MyList=["Support" ,"Shipping & Returns", "Size Guide ","Product Care" ];

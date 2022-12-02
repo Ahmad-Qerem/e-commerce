@@ -1,25 +1,40 @@
-import styles from"./styles.module.css"
+import styles from "./styles.module.css";
+import { Link, NavLink } from "react-router-dom";
 
+const ListItemsText = [
+  {
+    Title: "Home",
+    Link: "/",
+  },
+  {
+    Title: "Products",
+    Link: "ProductList",
+  },
+  {
+    Title: "About",
+    Link: "About",
+  },
+  {
+    Title: "Contact",
+    Link: "Contact",
+  },
+];
 
-const ListItemsText = ["shop","fabric","journal","about"];
-
-const LiftSide = (  )=> {
-    return(
-        <div className={styles.LeftDiv}>
-            <span className={styles.Logo}>matter</span>
-            <div className={styles.MyUl}>
-                {
-                    ListItemsText.map((item)=>{
-                        return(
-                            <div className={styles.myLi}> {item} <div className={styles.down}>&#62;</div></div>   
-                        );
-                    })
-                }
-                
-            </div>
-        </div>
-    );
-
+const LiftSide = () => {
+  return (
+    <div className={styles.LeftDiv}>
+      <span className={styles.Logo}>matter</span>
+      <div className={styles.MyUl}>
+        {ListItemsText.map((item, index) => {
+          return (
+            <NavLink  key={index} to={item.Link} className={styles.ListItem}>
+                {item.Title} 
+            </NavLink>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default LiftSide;
