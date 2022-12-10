@@ -1,15 +1,35 @@
-import styles from"./styles.module.css"
-
+import { Link } from "react-router-dom";
+import styles from"./../stylesShared.module.css"
 const CatsContainer=()=>{
-    const MyList=["About us" ,"Testimonials", "Contact","Journal" ,"Privacy Policy" ];
-
+    const MyList=[
+        {
+            Title:"About us",
+            Link:"About"
+        } ,
+        {
+            Title:"Testimonials",
+            Link:"About"
+        } ,
+        {
+            Title:"Contact",
+            Link:"About"
+        } ,
+        {
+            Title:"Journal",
+            Link:"About"
+        } ,
+        {
+            Title:"Privacy Policy",
+            Link:"About"
+        } ,
+    ];
     return(
         <div className={styles.CatsMainWrapper}>
             <div className={styles.CatsHeader}>
                 Categories
             </div>
             <div className={styles.CatsUL}>
-                {MyList.map((item)=>(<div className={styles.CatsLi}>{item}</div>))}
+                {MyList.map((item)=>(<Link to={item.Link} className={styles.CatsLi}>{item.Title}</Link>))}
             </div>
         </div>
     );

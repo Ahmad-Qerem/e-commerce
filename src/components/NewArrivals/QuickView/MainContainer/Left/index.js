@@ -1,30 +1,13 @@
-import React from 'react'
-import styles from './styles.module.css'
-import ImageComponent from './ImageComponent'
-import { useState } from 'react'
-const Left=({Images,thumbnail})=> {
-  const [index,setIndex]=useState(4);
-  const HandelImgHover = (index)=>{
-    setIndex(index);
-  }
+import React from "react";
+import styles from "./styles.module.css";
+import ImageComponent from "./ImageComponent";
+import { useState } from "react";
+const Left = ({ image }) => {
   return (
     <div className={styles.Left}>
-          <div className={styles.ImgArray}>
-            {Images.map((item, i) => {
-              return (
-                <ImageComponent
-                  onClick={()=>HandelImgHover(i)}
-                  Path={item}
-                  index={i}
-                />
-              );
-            })}
-          </div>
-          <div>
-            <img className={styles.Image} src={Images[index]?Images[index]:thumbnail} />
-          </div>
-        </div>
-  )
-}
+      <img className={styles.Image} src={image} />
+    </div>
+  );
+};
 
-export default Left
+export default Left;

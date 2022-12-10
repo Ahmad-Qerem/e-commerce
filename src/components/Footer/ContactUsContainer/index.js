@@ -1,4 +1,4 @@
-import styles from"./styles.module.css"
+import styles from"./../stylesShared.module.css"
 
 const ContactUsContainer=()=>{
 
@@ -7,9 +7,9 @@ const ContactUsContainer=()=>{
             <div className={styles.CatsHeader}>
                 Contact us 
             </div>
-            <div className={styles.CatsUL}>
-                <p>26A Pagoda St, TANGS,<br/>Singapore, 058187</p>
-                <p>+65 6221 5462</p>
+            <div className={`${styles.CatsLi}`}>
+                26A Pagoda St, TANGS,<br/>Singapore, 058187<br/>
+                +65 6221 5462
             </div>
         </div>
     );

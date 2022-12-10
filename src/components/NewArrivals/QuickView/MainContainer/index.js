@@ -1,22 +1,23 @@
 import React from "react";
 import styles from "./styles.module.css";
-import BTN from "../../Card/CardHover/BTN/index";
 import Left from "./Left";
 import Right from "./Right";
-const  MainContainer=({ DataCard })=> {
+import BTN from "../../../BTN";
+import { Link } from "react-router-dom";
+const MainContainer = ({ DataCard }) => {
   return (
     <div className={styles.MainContainer}>
       <div className={styles.TopDiv}>
-        {console.log(DataCard)}
-        <Left Images={DataCard.images} thumbnail={DataCard.thumbnail}/>
-        <Right DataCard={DataCard}/>
-
+        <Left image={DataCard.image} />
+        <Right DataCard={DataCard} />
       </div>
       <div className={styles.Button}>
-        <BTN Text={"View Full product Details"}/>
-      </div> 
+        <Link to={"/DetailsPage"}>
+          <BTN Text={"View Full Product"} />
+        </Link>
+      </div>
     </div>
   );
-}
+};
 
 export default MainContainer;

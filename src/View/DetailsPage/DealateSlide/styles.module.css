@@ -1,0 +1,37 @@
+.MainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.TextWrapper {
+  padding: 15px;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.P1 {
+  color: rgba(102, 102, 102, 1);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 25px;
+  padding: 20px 0;
+}
+
+.P2 {
+  color: rgba(51, 51, 58, 1);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: justify;
+  line-height: 25px;
+}

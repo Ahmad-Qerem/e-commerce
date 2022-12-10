@@ -1,8 +1,25 @@
 import styles from "./styles.module.css"
 import {useState} from 'react' 
+import { Link, NavLink } from "react-router-dom";
 
-const ListItemsText = ["shop","fabric","journal","about"];
-
+const ListItemsText = [
+  {
+    Title: "Home",
+    Link: "/",
+  },
+  {
+    Title: "Products",
+    Link: "ProductList",
+  },
+  {
+    Title: "About",
+    Link: "About",
+  },
+  {
+    Title: "Contact",
+    Link: "Contact",
+  },
+];
 const BurgerMenu = (  )=> {
     const [flag, setFlag] = useState(false);
     function HandelMenuOnClick() {
@@ -11,23 +28,20 @@ const BurgerMenu = (  )=> {
     return (
       <>
         <img onClick={HandelMenuOnClick} className={styles.IconBM} src="./images/icon-hamburger.svg" />
-        {flag && <div className={styles.MyBurgerMenu}>
+        {flag && 
           <div className={styles.Menu}>
-            <div className={styles.RightSide}>
+            <div className={styles.Top}>
                 <div className={styles.LogIn}>login</div>
-                  <a href=""><img className={styles.MyImg} src="./images/search.svg" alt="search"/></a>
-                  <a href=""><img className={styles.MyImg} src="./images/heart.svg" alt="favorite"/></a>
-                  <a href=""><img className={styles.MyImg} src="./images/Shape.svg" alt="shop"/></a>
+                  <Link to=""><img className={styles.MyImg} src="./images/search.svg" alt="search"/></Link>
+                  <Link to=""><img className={styles.MyImg} src="./images/heart.svg" alt="favorite"/></Link>
+                  <Link to=""><img className={styles.MyImg} src="./images/Shape.svg" alt="shop"/></Link>
             </div>
-            {ListItemsText.map((item) => {
-              return (
-                <div className={styles.MenuItem}>
-                  {item}<div className={`${styles.down} ${styles.margin}`}>&#62;</div>
-                </div>
-              );
-            })}
+
+            <div className={styles.Bottom}>
+              {ListItemsText.map((item) =><NavLink onClick={HandelMenuOnClick} className={styles.MenuItem} to={item.Link}>{item.Title}</NavLink>)}
+            </div>
           </div>
-        </div>}
+          }
       </>
     );
 

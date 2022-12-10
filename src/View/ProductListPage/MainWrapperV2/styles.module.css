@@ -1,0 +1,24 @@
+.MainWrapper {
+  padding: 40px 100px 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.DataSide {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+.TopWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.Reset {
+  padding: 0 10px;
+  border-radius: 50%;
+  color: tomato;
+  cursor: pointer;
+}
+.Reset:hover {
+  background-color: #f3f3f3;
+}

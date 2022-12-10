@@ -4,10 +4,8 @@ import PartnersContainer from "./PartnersContainer";
 import ContactUsContainer from "./ContactUsContainer";
 import SubContainer from "./SubContainer";
 import CopyRight from "./CopyRight";
-
 const Footer =()=>{
     return(
-        <>
         <div className={styles.Footer}>
             <div className={styles.FooterWrapper}>
                 <div className={styles.InnerFooterWrapper}> 
@@ -19,8 +17,6 @@ const Footer =()=>{
             </div>
             <CopyRight/>
         </div>
-        
-        </>
     );
 };
-export default Footer;
+export  {Footer};

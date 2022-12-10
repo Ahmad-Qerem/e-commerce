@@ -1,7 +1,4 @@
-@font-face {
-    font-family: Poppins;
-    src: url(../LiftSide/Poppins-Medium.ttf);
-}
+
 .RightSide{
 
     display: flex;
@@ -9,7 +6,6 @@
     align-items: center;
     text-transform: uppercase;
     color: #33333A;
-    font-family: Poppins;
     font-size: 12px;
     font-weight: 600;
     font-style: normal;
@@ -27,10 +23,15 @@
 }
 
 .LogIn{
+    text-decoration: none;
     text-transform: uppercase;
     cursor:pointer;
 }
+.LogInText{
+    text-decoration: none;
+}
 .LogIn:hover{
+
     color: tomato;
 }
 

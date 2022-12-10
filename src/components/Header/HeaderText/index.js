@@ -1,12 +1,5 @@
-import styles from "./styles.module.css" ;
-
-const HeaderText=()=>{
-    return(
-        <div className={styles.headerContainer}>
-            Free shipping for orders above USD 150
-        </div>       
-    );
+import styles from "./styles.module.css";
+const HeaderText = ({ text }) => {
+  return <div className={styles.headerContainer}>{text} </div>;
 };
-
-
-export default HeaderText; 
+export default HeaderText;
