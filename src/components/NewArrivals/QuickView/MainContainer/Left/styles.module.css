@@ -1,25 +1,27 @@
-.Image{
-    margin: 0;
-    width: 100%;
-    max-width: 458px;
-    height: 690px;
+.Image {
+  margin: 0;
+  width: 100%;
 }
-.Left{
-    display: flex;
-    flex: 1;
+.Left {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  min-width: 350px;
 }
-.ImgArray{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+
+.ImgArray {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
-@media screen and (max-width:660px) {
-    .Left{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .ImgArray{
-        flex-direction: row;        
-    }
+@media screen and (max-width: 660px) {
+  .Left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ImgArray {
+    flex-direction: row;
+  }
 }

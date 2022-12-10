@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { Rating } from "react-simple-star-rating";
-const Header = ({rating,price,title}) => {
+const Header = ({ rating, price, title }) => {
   return (
     <div className={styles.Header}>
       <div className={styles.HeaderTitle}>{title}</div>

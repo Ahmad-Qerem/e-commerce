@@ -1,15 +1,82 @@
-import styles from "./styles.module.css"
-import QVNave from "./QVNave"
-import MainContainer from "./MainContainer"
-const QuickView = ( {DataCard,onClickClose} )=>{
-    
-    return(
-        <div className={styles.QuickViewMainWrapper}>
-            <div className={styles.WhiteWindow}>
-                <QVNave title={DataCard.title} fun={onClickClose}/>
-                <MainContainer DataCard={DataCard} />
-           </div>
-        </div>
-    )
+import * as React from "react";
+import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import Typography from "@mui/material/Typography";
+
+import { useDataProvider } from "../../../Context/DataProvider";
+import MainContainer from "./MainContainer";
+import { color } from "@mui/system";
+import { red } from "@mui/material/colors";
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  "& .MuiPaper-root": {
+    maxWidth: "none",
+  },
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(2),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
+}));
+
+function BootstrapDialogTitle(props) {
+  const { children, onClose, ...other } = props;
+  return (
+    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+      {children}
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </DialogTitle>
+  );
 }
-export default QuickView;
+
+BootstrapDialogTitle.propTypes = {
+  children: PropTypes.node,
+  onClose: PropTypes.func.isRequired,
+};
+
+export default function CustomizedDialogs({ Index, open, handleClose }) {
+  const { AllProducts } = useDataProvider();
+  const Product = AllProducts[Index];
+
+  return (
+    <div>
+      <BootstrapDialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
+        <BootstrapDialogTitle
+          id="customized-dialog-title"
+          onClose={handleClose}
+        >
+          {Product.title}
+        </BootstrapDialogTitle>
+
+        <DialogContent dividers>
+          <MainContainer DataCard={Product} />
+        </DialogContent>
+      </BootstrapDialog>
+    </div>
+  );
+}

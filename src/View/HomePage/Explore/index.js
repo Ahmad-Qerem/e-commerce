@@ -1,15 +1,15 @@
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 import ExploreContainer from "./ExploreContainer";
 import BTN from "../../../components/BTN";
 
-const Explore = ()=>{
-    return(
-        <div className={styles.ExploreTopModule} >
-            <h1 className={styles.ExploreTitle}>Explore</h1>
-            <ExploreContainer/>
-            <BTN/>
-        </div>
-    );
+const Explore = () => {
+  return (
+    <div className={styles.ExploreTopModule}>
+      <h1 className={styles.ExploreTitle}>Explore</h1>
+      <ExploreContainer />
+      <BTN Text={"See the journal"} />
+    </div>
+  );
 };
 
-export  {Explore}; 
+export { Explore };

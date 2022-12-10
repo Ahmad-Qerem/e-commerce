@@ -1,17 +1,16 @@
-.MyBTN{
-    cursor:pointer;
-    text-transform: uppercase;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #33333A;
-    width: 174px;
-    height: 40px;
-    margin-top: 40px;
+.MyBTN {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #33333a;
+  width: 174px;
+  height: 40px;
 }
 
-.MyBTN:hover{
-    cursor:pointer;
-    background-color: #55533a;
+.MyBTN:hover {
+  cursor: pointer;
+  background-color: #55533a;
 }

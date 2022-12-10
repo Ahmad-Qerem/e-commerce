@@ -1,9 +1,7 @@
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 
-const BTN = ()=>{
-    return(
-        <div className={styles.MyBTN}>See the journal</div>
-    );
+const BTN = ({ Text }) => {
+  return <div className={styles.MyBTN}>{Text}</div>;
 };
 
-export default BTN; 
+export default BTN;

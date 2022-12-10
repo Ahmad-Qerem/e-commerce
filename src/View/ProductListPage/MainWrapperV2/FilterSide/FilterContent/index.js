@@ -13,6 +13,7 @@ const FilterContent = ({HandelArrowClick,onClick}) => {
 
   return (
     <div className={styles.MainWrapper} >
+      
       {AllCats && AllCats.map((item,index)=>{
         return <CategoryComponent index={index} title={item} onClick={()=>onClick(item)}/>
       })} 
