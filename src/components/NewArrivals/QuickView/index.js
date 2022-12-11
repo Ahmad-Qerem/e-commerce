@@ -55,10 +55,12 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function CustomizedDialogs({ Index, open, handleClose }) {
-  const { AllProducts } = useDataProvider();
-  const Product = AllProducts[Index];
-
+export default function CustomizedDialogs({
+  Product,
+  Index,
+  open,
+  handleClose,
+}) {
   return (
     <div>
       <BootstrapDialog

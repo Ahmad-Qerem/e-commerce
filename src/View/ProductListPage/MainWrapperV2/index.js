@@ -9,37 +9,25 @@ import {
 import { useFilterProvider } from "../../../Context/FilterProvider";
 import { NewArrival } from "../../../components/NewArrivals";
 import { useDataProvider } from "../../../Context/DataProvider";
-import axios from "axios";
-import { useEffect } from "react";
-const URL = "https://fakestoreapi.com/";
-const MainWrapperV2 = ({}) => {
+const MainWrapperV2 = () => {
   const { AllProducts } = useDataProvider();
-  const [ProductsToShow, SetProductsToShow] = useState(null);
+
   const { CatGlobalState, SetCatGlobalState, changeCategory } =
     useFilterProvider();
+
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
-    changeCategory(CatGlobalState.AllCategorizes[index]);
-    SetCatGlobalState({
-      ...CatGlobalState,
-      CategoryName: CatGlobalState.AllCategorizes[index],
-    });
-    SetProductsToShow(CatGlobalState.CurrentCategory);
-    console.log(CatGlobalState);
-  };
-  useEffect(() => {
-    axios
-      .get(URL + "products" + "/category/" + CatGlobalState.CategoryName)
-      .then((Response) => {
-        console.log(Response.data);
-        SetCatGlobalState(
-          { ...CatGlobalState },
-          (CatGlobalState.CurrentCategory = Response.data)
-        );
+    if (index > -1) {
+      console.log("sdfdafg");
+      SetCatGlobalState({
+        ...CatGlobalState,
+        CategoryName: CatGlobalState.AllCategorizes[index],
       });
-  }, [CatGlobalState.CurrentCategory]);
+      changeCategory(CatGlobalState.AllCategorizes[index]);
+    }
+  };
 
   return (
     <div className={styles.MainWrapper}>
@@ -70,13 +58,20 @@ const MainWrapperV2 = ({}) => {
                   selected={selectedIndex === index}
                   onClick={() => handleListItemClick(index)}
                 >
-                  <ListItemText primary={item} />
+                  <div className={styles.ListItemText}>{item}</div>
                 </ListItemButton>
               </>
             );
           })}
       </List>
-      <NewArrival Products={AllProducts} />
+      {
+        <NewArrival
+          Title={false}
+          Products={
+            selectedIndex == -1 ? AllProducts : CatGlobalState.CurrentCategory
+          }
+        />
+      }
     </div>
   );
 };

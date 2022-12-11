@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div className={styles.MainWrapper}>
       <Slider />
-      <NewArrival Products={AllProducts} />
+      <NewArrival Title={true} Products={AllProducts} />
       <About />
       <Explore />
       <Shop />

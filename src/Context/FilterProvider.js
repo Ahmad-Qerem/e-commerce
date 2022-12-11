@@ -30,34 +30,21 @@ const FilterProvider = ({ children }) => {
       });
     });
   }, []);
-
+  const SortCategory = (SortBy) => {};
   const changeCategory = (CategoryName) => {
-    SetCatGlobalState({
-      ...CatGlobalState,
-      CategoryName: CategoryName,
-    });
+    const string = URL + "products" + "/category/" + CategoryName;
+    console.log(string);
     axios
       .get(URL + "products" + "/category/" + CategoryName)
       .then((Response) => {
-        console.log({ Response });
-        SetCatGlobalState(
-          { ...CatGlobalState },
-          (CatGlobalState.CurrentCategory = Response.data)
-        );
+        console.log(Response.data);
+        SetCatGlobalState({
+          ...CatGlobalState,
+          CurrentCategory: Response.data,
+        });
       });
   };
 
-  // useEffect(() => {
-  //   axios
-  //     .get(URL + "products" + "/category/" + CatGlobalState.CategoryName)
-  //     .then((Response) => {
-  //       console.log({ Response });
-  //       SetCatGlobalState(
-  //         { ...CatGlobalState },
-  //         (CatGlobalState.CurrentCategory = Response.data)
-  //       );
-  //     });
-  // }, [CatGlobalState.CategoryName]);
   return (
     <MyProvider.Provider
       value={{ CatGlobalState, SetCatGlobalState, changeCategory }}

@@ -17,6 +17,6 @@
   justify-content: center;
 }
 .MainContainer {
+  flex: 1;
   margin: auto;
-  max-width: 930px;
 }
