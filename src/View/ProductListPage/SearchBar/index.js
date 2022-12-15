@@ -1,29 +1,56 @@
-import { Autocomplete, TextField } from "@mui/material";
+import {
+  Autocomplete,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 import React, { useState } from "react";
+import { useFilterProvider } from "../../../Context/FilterProvider";
 import styles from "./styles.module.css";
-const SearchBar = ({ Options, onChange }) => {
-  const [Selected, SetSelected] = useState("Price");
-  const [SelectedCat, SetCat] = useState("home-decoration");
-  const optionsData = ["Price", "Rate", "Stock", "Top"];
+const SearchBar = () => {
+  const { CatGlobalState, SetCatGlobalState, SortCategory } =
+    useFilterProvider();
+  const optionsData = ["Price", "Rate", "Name"];
+  const [Value, setValue] = useState("");
 
   const HandelSelect = (e) => {
-    SetSelected(e.target.value);
+    const temp = e.target.value;
+    setValue(temp);
+    SortCategory(temp);
+    /*     SetCatGlobalState({
+      ...CatGlobalState,
+      SortBy: temp,
+    }); */
+    /*     console.log(CatGlobalState);
+     */
   };
-  const HandelSelectCat = (item) => {
-    SetCat(item);
-  };
+
   return (
     <div className={styles.MainWrapper}>
       <span className={styles.LeftTitle}>Women</span>
-      <div className={styles.RightText}>
-        Sort by &nbsp;
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={optionsData}
-          sx={{ width: 250 }}
-          renderInput={(params) => <TextField {...params} label="Filter By" />}
-        />
+
+      <div className={styles.RightWrapper}>
+        <div className={styles.SortByTitle}>Sort by</div>
+
+        <FormControl>
+          <InputLabel id="FilterLabel">Filter</InputLabel>
+          <Select
+            sx={{
+              minWidth: 120,
+            }}
+            labelId="FilterLabel"
+            id="Filter"
+            value={Value}
+            label="Age"
+            onChange={HandelSelect}
+          >
+            {optionsData.map((item) => (
+              <MenuItem value={item}>{item}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </div>
     </div>
   );

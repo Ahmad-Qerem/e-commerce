@@ -1,20 +1,12 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
-
-import { useDataProvider } from "../../../Context/DataProvider";
 import MainContainer from "./MainContainer";
-import { color } from "@mui/system";
-import { red } from "@mui/material/colors";
-
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiPaper-root": {
     maxWidth: "none",
@@ -26,7 +18,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     padding: theme.spacing(1),
   },
 }));
-
 function BootstrapDialogTitle(props) {
   const { children, onClose, ...other } = props;
   return (
@@ -49,16 +40,17 @@ function BootstrapDialogTitle(props) {
     </DialogTitle>
   );
 }
-
 BootstrapDialogTitle.propTypes = {
   children: PropTypes.node,
   onClose: PropTypes.func.isRequired,
 };
-
-export default function CustomizedDialogs({ Index, open, handleClose }) {
-  const { AllProducts } = useDataProvider();
-  const Product = AllProducts[Index];
-
+export default function CustomizedDialogs({
+  ActiveBtn = true,
+  Product,
+  Index,
+  open,
+  handleClose,
+}) {
   return (
     <div>
       <BootstrapDialog
@@ -72,9 +64,8 @@ export default function CustomizedDialogs({ Index, open, handleClose }) {
         >
           {Product.title}
         </BootstrapDialogTitle>
-
         <DialogContent dividers>
-          <MainContainer DataCard={Product} />
+          <MainContainer DataCard={Product} ActiveBtn />
         </DialogContent>
       </BootstrapDialog>
     </div>

@@ -2,9 +2,8 @@ import styles from "./styles.module.css";
 import Card from "./Card";
 import QuickView from "./QuickView";
 import { useState } from "react";
-import { useDataProvider } from "../../Context/DataProvider";
 
-const NewArrival = ({ Products }) => {
+const NewArrivals = ({ Title, Products, SortPy }) => {
   const [open, setOpen] = useState(false);
   const [Index, setIndex] = useState(0);
   const handleClickOpen = (index) => {
@@ -14,14 +13,20 @@ const NewArrival = ({ Products }) => {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <>
       {open && (
-        <QuickView Index={Index} open={open} handleClose={handleClose} />
+        <QuickView
+          Product={Products[Index]}
+          Index={Index}
+          open={open}
+          handleClose={handleClose}
+        />
       )}
 
       <div className={styles.MainContainer}>
-        <h1 className={styles.MyH1}>Featured</h1>
+        {Title && <h1 className={styles.MyH1}>{Title}</h1>}
 
         <div className={styles.MyContainer}>
           {Products &&
@@ -39,4 +44,4 @@ const NewArrival = ({ Products }) => {
     </>
   );
 };
-export { NewArrival };
+export { NewArrivals };
