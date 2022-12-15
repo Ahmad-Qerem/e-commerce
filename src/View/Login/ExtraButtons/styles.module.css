@@ -1,0 +1,18 @@
+.ForgetPassword {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.class1 {
+  text-decoration: none;
+  color: #33333a;
+}
+.class2 {
+  color: white;
+  background-color: #33333a;
+}
+.class2:hover {
+  color: #33333a;
+  background-color: white;
+  transition: 0.5s;
+}

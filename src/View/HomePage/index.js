@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./styles.module.css";
 import { About } from "./About";
 import { Explore } from "./Explore";
-import { NewArrival } from "../../components/NewArrivals";
+import { NewArrivals } from "../../components/NewArrivals";
 import { RecommendedVideos } from "./RecommendedVideos";
 import { SeenIn } from "./SeenIn";
 import { Shop } from "./Shop";
@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div className={styles.MainWrapper}>
       <Slider />
-      <NewArrival Title={true} Products={AllProducts} />
+      <NewArrivals Title={"FEATURED"} Products={AllProducts} />
       <About />
       <Explore />
       <Shop />

@@ -30,7 +30,47 @@ const FilterProvider = ({ children }) => {
       });
     });
   }, []);
-  const SortCategory = (SortBy) => {};
+
+  const SortCategory = (SortBy) => {
+    console.log(SortBy);
+    SetCatGlobalState({
+      ...CatGlobalState,
+      SortBy: SortBy,
+    });
+    console.log(CatGlobalState.CurrentCategory);
+    let Temp = [];
+    switch (SortBy) {
+      case "Name":
+        SetCatGlobalState({
+          ...CatGlobalState,
+          CurrentCategory: CatGlobalState.CurrentCategory.sort(
+            (a, b) => a.title - b.title
+          ),
+        });
+
+        break;
+      case "Price":
+        SetCatGlobalState({
+          ...CatGlobalState,
+          CurrentCategory: CatGlobalState.CurrentCategory.sort(
+            (a, b) => a.title - b.title
+          ),
+        });
+        break;
+      case "Rate":
+        SetCatGlobalState({
+          ...CatGlobalState,
+          CurrentCategory: CatGlobalState.CurrentCategory.sort(
+            (a, b) => a.rate - b.rate
+          ),
+        });
+        break;
+      default:
+        break;
+    }
+    console.log(Temp);
+  };
+
   const changeCategory = (CategoryName) => {
     const string = URL + "products" + "/category/" + CategoryName;
     console.log(string);
@@ -47,7 +87,12 @@ const FilterProvider = ({ children }) => {
 
   return (
     <MyProvider.Provider
-      value={{ CatGlobalState, SetCatGlobalState, changeCategory }}
+      value={{
+        CatGlobalState,
+        SetCatGlobalState,
+        changeCategory,
+        SortCategory,
+      }}
     >
       {children}
     </MyProvider.Provider>

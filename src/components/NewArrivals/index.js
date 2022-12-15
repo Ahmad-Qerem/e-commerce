@@ -3,7 +3,7 @@ import Card from "./Card";
 import QuickView from "./QuickView";
 import { useState } from "react";
 
-const NewArrival = ({ Title, Products, SortPy }) => {
+const NewArrivals = ({ Title, Products, SortPy }) => {
   const [open, setOpen] = useState(false);
   const [Index, setIndex] = useState(0);
   const handleClickOpen = (index) => {
@@ -26,7 +26,7 @@ const NewArrival = ({ Title, Products, SortPy }) => {
       )}
 
       <div className={styles.MainContainer}>
-        {Title && <h1 className={styles.MyH1}>Featured</h1>}
+        {Title && <h1 className={styles.MyH1}>{Title}</h1>}
 
         <div className={styles.MyContainer}>
           {Products &&
@@ -44,4 +44,4 @@ const NewArrival = ({ Title, Products, SortPy }) => {
     </>
   );
 };
-export { NewArrival };
+export { NewArrivals };

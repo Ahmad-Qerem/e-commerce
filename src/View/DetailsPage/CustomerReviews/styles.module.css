@@ -1,0 +1,34 @@
+.MainWrapper {
+  max-width: 750px;
+  width: 100%;
+}
+.TopRightWrapper {
+  color: rgba(102, 102, 102, 1);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.TopRightWrapper span {
+  margin-right: 40px;
+}
+.TopWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.ShowMore {
+  cursor: pointer;
+  color: rgba(255, 94, 27, 1);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+.ShowMore:hover {
+  background-color: rgba(255, 94, 27, 0.1);
+}

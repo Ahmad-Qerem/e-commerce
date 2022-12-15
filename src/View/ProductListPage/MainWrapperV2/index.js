@@ -7,8 +7,9 @@ import {
   ListSubheader,
 } from "@mui/material";
 import { useFilterProvider } from "../../../Context/FilterProvider";
-import { NewArrival } from "../../../components/NewArrivals";
+import { NewArrivals } from "../../../components/NewArrivals";
 import { useDataProvider } from "../../../Context/DataProvider";
+import Size from "../../../components/NewArrivals/QuickView/MainContainer/Right/Size";
 const MainWrapperV2 = () => {
   const { AllProducts } = useDataProvider();
 
@@ -63,9 +64,10 @@ const MainWrapperV2 = () => {
               </>
             );
           })}
+        <Size />
       </List>
       {
-        <NewArrival
+        <NewArrivals
           Title={false}
           Products={
             selectedIndex == -1 ? AllProducts : CatGlobalState.CurrentCategory

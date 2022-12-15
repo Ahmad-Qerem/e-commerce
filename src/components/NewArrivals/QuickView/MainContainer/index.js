@@ -4,7 +4,7 @@ import Left from "./Left";
 import Right from "./Right";
 import BTN from "../../../BTN";
 import { Link } from "react-router-dom";
-const MainContainer = ({ DataCard }) => {
+const MainContainer = ({ ActiveBtn, DataCard }) => {
   return (
     <div className={styles.MainContainer}>
       <div className={styles.TopDiv}>
@@ -12,9 +12,11 @@ const MainContainer = ({ DataCard }) => {
         <Right DataCard={DataCard} />
       </div>
       <div className={styles.Button}>
-        <Link to={"/DetailsPage"}>
-          <BTN Text={"View Full Product"} />
-        </Link>
+        {ActiveBtn && (
+          <Link to={"/DetailsPage"}>
+            <BTN Text={"View Full Product"} />
+          </Link>
+        )}
       </div>
     </div>
   );

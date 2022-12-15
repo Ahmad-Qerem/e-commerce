@@ -1,17 +1,54 @@
+import React from "react";
+import { useState } from "react";
+import { useContext } from "react";
+import { useEffect } from "react";
 import { createContext } from "react";
+import axios from "axios";
+import { useMemo } from "react";
+const URL = "https://fakestoreapi.com/";
 
-const UserProvider = createContext(null);
+const MyContext = createContext(null);
 const useUserProvider = () => {
-  return useContext(UserProvider);
+  return useContext(MyContext);
 };
 
-const UserProviderContext = ({ children }) => {
-  const [User, SetUser] = useState(null);
-  const UserProviderValue = useMemo(() => ({ User, SetUser }), [User, SetUser]);
+const UserProvider = ({ children }) => {
+  const [User, SetUser] = useState({});
+  const [AllUsers, SetAllUsers] = useState();
+  const [Authenticated, SetAuthenticated] = useState(false);
+  const [Token, SetToken] = useState();
+  const UserLogIn = (Email, password) => {
+    const NewUser = AllUsers.find((item) => item.email === Email);
+    if (NewUser) {
+      if (NewUser.password === password) {
+        SetUser(NewUser);
+        axios
+          .post(URL + "auth/login", {
+            username: NewUser.username,
+            password: password,
+          })
+          .then((Response) => {
+            SetToken(Response.data.Token);
+            SetAuthenticated(true);
+          });
 
+        return false;
+      } else {
+        return true;
+      }
+    }
+  };
+  useEffect(() => {
+    axios.get(URL + "users").then((Response) => {
+      console.log(Response.data);
+      SetAllUsers(Response.data);
+      console.log(AllUsers);
+    });
+  }, []);
   return (
-    <UserProvider.Provider value={UserProviderValue}>
+    <MyContext.Provider value={{ User, Authenticated, UserLogIn }}>
       {children}
-    </UserProvider.Provider>
+    </MyContext.Provider>
   );
 };
+export { UserProvider, useUserProvider };
