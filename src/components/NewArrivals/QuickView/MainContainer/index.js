@@ -13,7 +13,7 @@ const MainContainer = ({ ActiveBtn, DataCard }) => {
       </div>
       <div className={styles.Button}>
         {ActiveBtn && (
-          <Link to={"/DetailsPage"}>
+          <Link to={"/DetailsPage/" + DataCard.id}>
             <BTN Text={"View Full Product"} />
           </Link>
         )}

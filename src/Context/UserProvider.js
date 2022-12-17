@@ -38,6 +38,12 @@ const UserProvider = ({ children }) => {
       }
     }
   };
+  const Logout = () => {
+    alert("Logged Out");
+    SetUser(null);
+    SetAuthenticated(false);
+  };
+
   useEffect(() => {
     axios.get(URL + "users").then((Response) => {
       console.log(Response.data);
@@ -46,7 +52,7 @@ const UserProvider = ({ children }) => {
     });
   }, []);
   return (
-    <MyContext.Provider value={{ User, Authenticated, UserLogIn }}>
+    <MyContext.Provider value={{ User, Authenticated, UserLogIn, Logout }}>
       {children}
     </MyContext.Provider>
   );

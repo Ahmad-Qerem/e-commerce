@@ -2,6 +2,8 @@ import styles from "./styles.module.css";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
+import { useUserProvider } from "../../../../Context/UserProvider";
+import UserImage from "../RightSide/UserImage";
 const sxStyle = [
   {
     w: "100%",
@@ -29,6 +31,8 @@ const ListItemsText = [
   },
 ];
 const BurgerMenu = () => {
+  const { User, Authenticated } = useUserProvider();
+
   const [flag, setFlag] = useState(false);
   function HandelMenuOnClick() {
     setFlag(!flag);
@@ -38,34 +42,38 @@ const BurgerMenu = () => {
       <img
         onClick={HandelMenuOnClick}
         className={styles.IconBM}
-        src="./images/icon-hamburger.svg"
+        src="/images/icon-hamburger.svg"
       />
       {flag && (
         <div className={styles.Menu}>
           <div className={styles.Top}>
             <div onClick={HandelMenuOnClick}>
-              <Link to="/Login" className={styles.LogIn}>
-                login
-              </Link>
+              {Authenticated ? (
+                <UserImage User={User} />
+              ) : (
+                <Link to="/Login" className={styles.LogIn}>
+                  Log In
+                </Link>
+              )}
             </div>
             <Link to="/search">
               <img
                 className={styles.MyImg}
-                src="./images/search.svg"
+                src="/images/search.svg"
                 alt="search"
               />
             </Link>
             <Link to="/favorite">
               <img
                 className={styles.MyImg}
-                src="./images/heart.svg"
+                src="/images/heart.svg"
                 alt="favorite"
               />
             </Link>
             <Link to="/ProductList">
               <img
                 className={styles.MyImg}
-                src="./images/Shape.svg"
+                src="/images/Shape.svg"
                 alt="shop"
               />
             </Link>
@@ -74,13 +82,13 @@ const BurgerMenu = () => {
           <div className={styles.Bottom}>
             <div className={styles.Buttons}>
               {ListItemsText.map((item) => (
-                <NavLink
+                <Link
                   onClick={HandelMenuOnClick}
                   className={styles.MenuItem}
                   to={item.Link}
                 >
                   {item.Title}
-                </NavLink>
+                </Link>
               ))}
             </div>
           </div>
