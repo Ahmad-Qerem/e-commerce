@@ -19,7 +19,7 @@ const App = () => {
                 <Route exact path="/Login" element={<AllPages.Login />}></Route>
                 <Route
                   exact
-                  path="/DetailsPage"
+                  path="/DetailsPage/:ProductID"
                   element={<AllPages.DetailsPage />}
                 ></Route>
                 <Route
@@ -29,6 +29,7 @@ const App = () => {
                 />
                 <Route exact path="/Checkout" element={<AllPages.Checkout />} />
                 <Route exact path="/SignUp" element={<AllPages.SignUp />} />
+                <Route exact path="/Contact" element={<AllPages.ContactUs />} />
               </Routes>
             </div>
 

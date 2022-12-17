@@ -16,22 +16,15 @@ const RightSide = () => {
           </Button>
         </Link>
       )}
-
-      <div>
-        <Link to="/Search">
-          <img className={styles.MyImg} src="/images/search.svg" alt="search" />
-        </Link>
-        <Link to="/Favorite">
-          <img
-            className={styles.MyImg}
-            src="/images/heart.svg"
-            alt="favorite"
-          />
-        </Link>
-        <Link to="/Shop">
-          <img className={styles.MyImg} src="/images/Shape.svg" alt="shop" />
-        </Link>
-      </div>
+      <Link to="/Search">
+        <img className={styles.MyImg} src="/images/search.svg" alt="search" />
+      </Link>
+      <Link to="/Favorite">
+        <img className={styles.MyImg} src="/images/heart.svg" alt="favorite" />
+      </Link>
+      <Link to="/Shop">
+        <img className={styles.MyImg} src="/images/Shape.svg" alt="shop" />
+      </Link>
     </div>
   );
 };

@@ -8,7 +8,10 @@ import PText from "./PText";
 import AsSeenOn from "./AsSeenOn";
 import { NewArrivals } from "../../components/NewArrivals";
 import { CustomerReviews } from "./CustomerReviews";
-const DetailsPage = ({ index = 0 }) => {
+import { useParams } from "react-router-dom";
+const DetailsPage = () => {
+  const { ProductID } = useParams();
+  console.log(ProductID);
   const { AllProducts } = useDataProvider();
   const Product = [
     {
@@ -17,7 +20,7 @@ const DetailsPage = ({ index = 0 }) => {
       price: 599,
       description: "Pueraria Mirifica And Study Phyto Estrogens",
       category: "women's clothing",
-      image: "images/image_6.png",
+      image: "/images/image_6.png",
       rating: { rate: 4.9, count: 10 },
     },
     {
@@ -26,7 +29,7 @@ const DetailsPage = ({ index = 0 }) => {
       price: 199,
       description: "Pueraria Mirifica And Study Phyto Estrogens",
       category: "men's clothing",
-      image: "images/image_49.png",
+      image: "/images/image_49.png",
       rating: { rate: 3.9, count: 30 },
     },
     {
@@ -35,7 +38,7 @@ const DetailsPage = ({ index = 0 }) => {
       price: 320,
       description: "Pueraria Mirifica And Study Phyto Estrogens",
       category: "men's clothing",
-      image: "images/image_70.png",
+      image: "/images/image_70.png",
       rating: { rate: 3.3, count: 40 },
     },
     {
@@ -44,14 +47,18 @@ const DetailsPage = ({ index = 0 }) => {
       price: 320,
       description: "Pueraria Mirifica And Study Phyto Estrogens",
       category: "men's clothing",
-      image: "images/image_5.png",
+      image: "/images/image_5.png",
       rating: { rate: 3.3, count: 40 },
     },
   ];
 
   return (
     <div className={styles.MainWrapper}>
-      <MainContainer DataCard={AllProducts[index]} />
+      {AllProducts && (
+        <MainContainer
+          DataCard={AllProducts.find((item) => item.id == ProductID)}
+        />
+      )}
       <DealateSlide />
       <ThreeImages />
       <PText />

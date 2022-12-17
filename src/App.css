@@ -38,7 +38,7 @@ body {
 }
 .active {
   color: tomato !important;
-  border: 5px solid tomato !important;
+  border-bottom: 5px solid tomato !important;
 }
 .Container {
   min-height: 100vh;

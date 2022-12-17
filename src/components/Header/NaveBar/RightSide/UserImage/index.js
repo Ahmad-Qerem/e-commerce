@@ -9,17 +9,41 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 import { useState } from "react";
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import { useNavigate } from "react-router-dom";
+import { useUserProvider } from "../../../../../Context/UserProvider";
+const settings = [
+  {
+    Title: "Profile",
+    Link: "/Profile",
+  },
+  {
+    Title: "Wish List",
+    Link: "/WishList",
+  },
+  {
+    Title: "Dashboard",
+    Link: "/Dashboard",
+  },
+  {
+    Title: "Logout",
+    Link: "/",
+  },
+];
 
 const UserImage = ({ User }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-
+  const Navigate = useNavigate();
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
+  const { Logout } = useUserProvider();
 
-  const handleCloseUserMenu = () => {
+  const handleCloseUserMenu = (Link) => {
+    if (Link == "/") {
+      Logout();
+    }
+    Navigate(Link);
     setAnchorElUser(null);
   };
   return (
@@ -29,6 +53,7 @@ const UserImage = ({ User }) => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        zIndex: "10",
       }}
     >
       <Typography sx={{ paddingRight: "20px" }}>
@@ -37,7 +62,10 @@ const UserImage = ({ User }) => {
 
       <Tooltip title="Open settings">
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-          <Avatar alt="Avatar" src={`./images/Users/${User.id}.jpg`} />
+          <Avatar
+            alt={User.name.firstname.toUpperCase()}
+            src={`./images/Users/${User.id}.jpg`}
+          />
         </IconButton>
       </Tooltip>
       <Menu
@@ -53,11 +81,14 @@ const UserImage = ({ User }) => {
           horizontal: "right",
         }}
         open={Boolean(anchorElUser)}
-        onClose={handleCloseUserMenu}
+        onClose={() => handleCloseUserMenu()}
       >
-        {settings.map((setting) => (
-          <MenuItem key={setting} onClick={handleCloseUserMenu}>
-            <Typography textAlign="center">{setting}</Typography>
+        {settings.map((setting, index) => (
+          <MenuItem
+            key={`${setting.Title}-${index}`}
+            onClick={() => handleCloseUserMenu(setting.Link)}
+          >
+            <Typography textAlign="center">{setting.Title}</Typography>
           </MenuItem>
         ))}
       </Menu>

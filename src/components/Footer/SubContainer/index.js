@@ -53,8 +53,8 @@ const SubContainer = () => {
       </div>
 
       <div>
-        <img className={styles.MyIcons} src="./images/Facebook.svg" />
-        <img className={styles.MyIcons} src="./images/Twitter.svg" />
+        <img className={styles.MyIcons} src="/images/Facebook.svg" />
+        <img className={styles.MyIcons} src="/images/Twitter.svg" />
       </div>
     </div>
   );

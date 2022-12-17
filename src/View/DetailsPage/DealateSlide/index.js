@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 const DealateSlide = () => {
   return (
     <div className={styles.MainWrapper}>
-      <img className={styles.Image} src="./images/image_66.png" />
+      <img className={styles.Image} src="/images/image_66.png" />
       <div className={styles.TextWrapper}>
         <div className={styles.P1}>
           I have taste grilled meats around the world. Before i will guide you

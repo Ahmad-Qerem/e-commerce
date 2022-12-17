@@ -4,15 +4,15 @@ import ImageTitled from "./ImageTitled";
 const ThreeImages = () => {
   const Data = [
     {
-      image: "./images/image_67.png",
+      image: "/images/image_67.png",
       title: "Lorem ipsum dolor sit amet",
     },
     {
-      image: "./images/image_27.png",
+      image: "/images/image_27.png",
       title: "Lorem ipsum dolor sit amet",
     },
     {
-      image: "./images/image_63.png",
+      image: "/images/image_63.png",
       title: "Lorem ipsum dolor sit amet",
     },
   ];
