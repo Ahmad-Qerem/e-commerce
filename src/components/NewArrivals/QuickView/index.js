@@ -65,7 +65,11 @@ export default function CustomizedDialogs({
           {Product.title}
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <MainContainer DataCard={Product} ActiveBtn />
+          <MainContainer
+            DataCard={Product}
+            ActiveBtn
+            handleClose={handleClose}
+          />
         </DialogContent>
       </BootstrapDialog>
     </div>
