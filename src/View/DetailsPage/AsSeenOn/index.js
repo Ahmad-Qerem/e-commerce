@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./styles.module.css";
 const AsSeenOn = ({ Title }) => {
   const ImageArray = [
-    "./images/image_20.png",
-    "./images/image_54.png",
-    "./images/image_1.png",
-    "./images/image_33.png",
+    "/images/image_20.png",
+    "/images/image_54.png",
+    "/images/image_1.png",
+    "/images/image_33.png",
   ];
   return (
     <div className={styles.MainWrapper}>
