@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import { createContext } from "react";
 import axios from "axios";
 import { useMemo } from "react";
+import { SetCart } from "../Redux/Slice/CartSlice";
+import { useDispatch } from "react-redux";
 const URL = "https://fakestoreapi.com/";
 
 const MyContext = createContext(null);
@@ -17,6 +19,7 @@ const UserProvider = ({ children }) => {
   const [AllUsers, SetAllUsers] = useState();
   const [Authenticated, SetAuthenticated] = useState(false);
   const [Token, SetToken] = useState();
+  const despatch = useDispatch();
   const UserLogIn = (Email, password) => {
     const NewUser = AllUsers.find((item) => item.email === Email);
     if (NewUser) {
@@ -30,6 +33,8 @@ const UserProvider = ({ children }) => {
           .then((Response) => {
             SetToken(Response.data.Token);
             SetAuthenticated(true);
+            const id = NewUser.id;
+            despatch(SetCart({ id }));
           });
 
         return false;

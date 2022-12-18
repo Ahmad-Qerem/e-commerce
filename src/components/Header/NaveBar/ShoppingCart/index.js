@@ -4,20 +4,15 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
 import CssBaseline from "@mui/material/CssBaseline";
-import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import Cart from "./Cart";
+import styles from "./styles.module.css";
+import { useSelector } from "react-redux";
 
-const drawerWidth = 400;
+const drawerWidth = 500;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -46,9 +41,11 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const ShoppingCart = () => {
+  const Products = useSelector((state) => state.cart.products);
+  var AllQuantity = 0;
+  Products.map((i) => (AllQuantity += i.quantity));
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -67,12 +64,19 @@ const ShoppingCart = () => {
         onClick={handleDrawerOpen}
       >
         <img src="./images/Shape.svg" />
+
+        {AllQuantity !== 0 ? (
+          <div className={styles.TotalItems}>{AllQuantity}</div>
+        ) : (
+          <></>
+        )}
       </IconButton>
 
       <Drawer
         sx={{
           width: drawerWidth,
           flexShrink: 0,
+          position: "absolute",
           "& .MuiDrawer-paper": {
             width: drawerWidth,
           },
@@ -91,31 +95,8 @@ const ShoppingCart = () => {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+
+        <Cart />
       </Drawer>
     </Box>
   );

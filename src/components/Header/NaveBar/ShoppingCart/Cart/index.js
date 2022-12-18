@@ -1,22 +1,26 @@
-import Item from "../Item";
+import CartItem from "../CartItem";
+import styles from "./styles.module.css";
+import { useSelector, useDispatch } from "react-redux";
 
-const Cart = ({ cartItems, addToCart, removeFromCart }) => {
-  const calculateTotal = (items) =>
-    items.reduce((acc, item) => acc + item.amount * item.price, 0);
+const Cart = () => {
+  const UserCart = useSelector((state) => state.cart.products);
+  const TotalPrice = 0;
 
   return (
-    <div>
-      <h2>Your Cart</h2>
-      {cartItems.length === 0 ? <p>No items in cart.</p> : null}
-      {cartItems.map((item) => (
-        <Item
-          key={item.id}
-          item={item}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-        />
-      ))}
-      <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
+    <div className={styles.MainWrapper}>
+      <h2 className={styles.CartTitle}>Your Cart</h2>
+      {UserCart.length === 0 ? <p>No items in cart.</p> : null}
+      {UserCart &&
+        UserCart.map((item) => {
+          return (
+            <CartItem
+              key={item.id}
+              ProductId={item.productId}
+              Quantity={item.quantity}
+            />
+          );
+        })}
+      <h2 className={styles.CartSupTitle}>Total: ${TotalPrice}</h2>
     </div>
   );
 };

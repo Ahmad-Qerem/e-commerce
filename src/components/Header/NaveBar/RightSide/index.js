@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { Button } from "@mui/material";
 import { useUserProvider } from "../../../../Context/UserProvider";
 import UserImage from "./UserImage";
+import { ShoppingCart } from "../ShoppingCart";
 const RightSide = () => {
   const { User, Authenticated } = useUserProvider();
   return (
@@ -22,9 +23,7 @@ const RightSide = () => {
       <Link to="/Favorite">
         <img className={styles.MyImg} src="/images/heart.svg" alt="favorite" />
       </Link>
-      <Link to="/Shop">
-        <img className={styles.MyImg} src="/images/Shape.svg" alt="shop" />
-      </Link>
+      <ShoppingCart />
     </div>
   );
 };

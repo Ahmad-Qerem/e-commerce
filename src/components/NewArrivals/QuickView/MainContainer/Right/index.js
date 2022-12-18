@@ -1,11 +1,11 @@
 import React from "react";
-import AddToCart from "./AddToCart";
+import AddToCartWrapper from "./AddToCartWrapper";
 import Description from "./Description";
 import Description2 from "./Description2";
 import Header from "./Header";
 import Size from "./Size";
 import styles from "./styles.module.css";
-const Right = ({ DataCard }) => {
+const Right = ({ DataCard, handleClose }) => {
   return (
     <div className={styles.Right}>
       <Header
@@ -16,7 +16,7 @@ const Right = ({ DataCard }) => {
       <Description description={DataCard.description} />
       <Description2 category={DataCard.category} />
       <Size />
-      <AddToCart />
+      <AddToCartWrapper ProductId={DataCard.id} handleClose={handleClose} />
     </div>
   );
 };

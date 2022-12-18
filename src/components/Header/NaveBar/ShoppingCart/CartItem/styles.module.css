@@ -1,0 +1,56 @@
+.MainWrapper {
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0px 10px 40px rgb(0 0 0 / 5%);
+}
+.Left {
+  flex: 1;
+}
+.MyImage {
+  max-width: 100px;
+}
+.InnerWrapper {
+  display: flex;
+}
+.information {
+}
+.Buttons {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Circle {
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 35px;
+  height: 35px;
+  background-color: #33333a;
+  border: 3px solid #33333a;
+
+  border-radius: 50%;
+}
+.Circle:hover {
+  color: #33333a;
+  background-color: white;
+}
+.Quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 60px;
+  background-color: #f3f3f3;
+  border: 2px solid #33333a;
+  border-radius: 5px;
+}
+.HederTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
