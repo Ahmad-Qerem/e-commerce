@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/your-repo-name/static/css/main.63e81f21.css",
+    "main.js": "/your-repo-name/static/js/main.d04a7c8a.js",
+    "static/media/Poppins-Medium.ttf": "/your-repo-name/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "index.html": "/your-repo-name/index.html",
+    "main.63e81f21.css.map": "/your-repo-name/static/css/main.63e81f21.css.map",
+    "main.d04a7c8a.js.map": "/your-repo-name/static/js/main.d04a7c8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63e81f21.css",
+    "static/js/main.d04a7c8a.js"
+  ]
+}
