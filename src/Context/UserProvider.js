@@ -22,8 +22,11 @@ const UserProvider = ({ children }) => {
   const despatch = useDispatch();
   const UserLogIn = (Email, password) => {
     const NewUser = AllUsers.find((item) => item.email === Email);
+    console.log(NewUser);
     if (NewUser) {
       if (NewUser.password === password) {
+        console.log('yes u can');
+
         SetUser(NewUser);
         axios
           .post(URL + "auth/login", {
@@ -31,6 +34,7 @@ const UserProvider = ({ children }) => {
             password: password,
           })
           .then((Response) => {
+            console.log(Response.data);
             SetToken(Response.data.Token);
             SetAuthenticated(true);
             const id = NewUser.id;
@@ -51,7 +55,6 @@ const UserProvider = ({ children }) => {
 
   useEffect(() => {
     axios.get(URL + "users").then((Response) => {
-      console.log(Response.data);
       SetAllUsers(Response.data);
       console.log(AllUsers);
     });

@@ -65,6 +65,7 @@ const Login = () => {
   const HandelSubmit = () => {
     var validRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      
     if (DataForme.UserName.match(validRegex)) {
       SetValid(UserLogIn(DataForme.UserName, DataForme.Password));
       if (Authenticated) {
