@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/your-repo-name/static/css/main.63e81f21.css",
-    "main.js": "/your-repo-name/static/js/main.d04a7c8a.js",
-    "static/media/Poppins-Medium.ttf": "/your-repo-name/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
-    "index.html": "/your-repo-name/index.html",
-    "main.63e81f21.css.map": "/your-repo-name/static/css/main.63e81f21.css.map",
-    "main.d04a7c8a.js.map": "/your-repo-name/static/js/main.d04a7c8a.js.map"
+    "main.css": "/e-commerce/static/css/main.fda7d1ea.css",
+    "main.js": "/e-commerce/static/js/main.d04a7c8a.js",
+    "static/media/Poppins-Medium.ttf": "/e-commerce/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "index.html": "/e-commerce/index.html",
+    "main.fda7d1ea.css.map": "/e-commerce/static/css/main.fda7d1ea.css.map",
+    "main.d04a7c8a.js.map": "/e-commerce/static/js/main.d04a7c8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.63e81f21.css",
+    "static/css/main.fda7d1ea.css",
     "static/js/main.d04a7c8a.js"
   ]
 }
