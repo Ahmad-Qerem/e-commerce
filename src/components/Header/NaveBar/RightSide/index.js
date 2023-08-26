@@ -18,10 +18,18 @@ const RightSide = () => {
         </Link>
       )}
       <Link to="/Search">
-        <img className={styles.MyImg} src="/images/search.svg" alt="search" />
+        <img
+          className={styles.MyImg}
+          src="./images/search.svg"
+          alt="search"
+        />
       </Link>
       <Link to="/Favorite">
-        <img className={styles.MyImg} src="/images/heart.svg" alt="favorite" />
+        <img
+          className={styles.MyImg}
+          src="./images/heart.svg"
+          alt="favorite"
+        />
       </Link>
       <ShoppingCart />
     </div>

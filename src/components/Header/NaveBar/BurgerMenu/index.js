@@ -42,7 +42,7 @@ const BurgerMenu = () => {
       <img
         onClick={HandelMenuOnClick}
         className={styles.IconBM}
-        src="/images/icon-hamburger.svg"
+        src="./images/icon-hamburger.svg"
       />
       {flag && (
         <div className={styles.Menu}>
@@ -59,21 +59,21 @@ const BurgerMenu = () => {
             <Link to="/search">
               <img
                 className={styles.MyImg}
-                src="/images/search.svg"
+                src="./images/search.svg"
                 alt="search"
               />
             </Link>
             <Link to="/favorite">
               <img
                 className={styles.MyImg}
-                src="/images/heart.svg"
+                src="./images/heart.svg"
                 alt="favorite"
               />
             </Link>
             <Link to="/ProductList">
               <img
                 className={styles.MyImg}
-                src="/images/Shape.svg"
+                src="./images/Shape.svg"
                 alt="shop"
               />
             </Link>

@@ -46,7 +46,7 @@ const AddToCartWrapper = ({ ProductId, handleClose }) => {
           <BTN Text={"ADD TO CART"} />
         </div>
         <div className={styles.QuantityWishList}>
-          <img src="/images/questions.png" height={"40px"} />
+          <img src="./images/questions.png" height={"40px"} />
           <span>add to wishlist</span>
         </div>
       </div>
