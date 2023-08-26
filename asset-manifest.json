@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://ahmad-qerem.github.io/e-commerce/static/css/main.47767f0e.css",
-    "main.js": "https://ahmad-qerem.github.io/e-commerce/static/js/main.33cf351b.js",
+    "main.js": "https://ahmad-qerem.github.io/e-commerce/static/js/main.955464c8.js",
     "static/media/Poppins-Medium.ttf": "https://ahmad-qerem.github.io/e-commerce/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "index.html": "https://ahmad-qerem.github.io/e-commerce/index.html",
     "main.47767f0e.css.map": "https://ahmad-qerem.github.io/e-commerce/static/css/main.47767f0e.css.map",
-    "main.33cf351b.js.map": "https://ahmad-qerem.github.io/e-commerce/static/js/main.33cf351b.js.map"
+    "main.955464c8.js.map": "https://ahmad-qerem.github.io/e-commerce/static/js/main.955464c8.js.map"
   },
   "entrypoints": [
     "static/css/main.47767f0e.css",
-    "static/js/main.33cf351b.js"
+    "static/js/main.955464c8.js"
   ]
 }
